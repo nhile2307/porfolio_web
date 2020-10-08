@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+    <title>My Work| Front-End | Data Analyst</title>
+</head>
+
+<body>
+    <header id="header-inner">
+        <div class="container">
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="work.html" class="current">Work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="work-a" class="text-center">
+        <div class="container">
+            <h2 class="section-title">My Work</h2>
+            <p class="lead">
+                Check out some of my projects
+            </p>
+            <div class="porfolio-menu">
+                <ul>
+                    <li class="active" data-filter='all'>All</li>
+                    <li data-filter='tableau'>Tableau</li>
+                    <li data-filter='java'>Java</li>
+                    <li data-filter='c'>C</li>
+                    <li data-filter='python'>Python</li>
+                </ul>
+            </div>
+            <div class="items">
+                <div class="item tableau">
+
+                    <div class="item-text">
+                        <div class="item-text-wrap">
+                            <h5 class="item-text-category">TABLEAU</h5>
+                            <h3 class="item-text-title"> <a href="https://public.tableau.com/profile/nhi.le#!/?newProfile=&activeTab=0" target="_blank"> Analysing public data sets</a></h3>
+                            <p>Creating dashboard base on data set and draw insights
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item java">
+                    <div class="item-text">
+                        <div class="item-text-wrap">
+                            <h5 class="item-text-category">JAVA</h5>
+                            <h3 class="item-text-title"> <a href="https://github.com/thoanguyen290795/Shopping-Cart-React-Redux.git" target="_blank"> Academy Management</a></h3>
+                            <p>Build system to manage students, staffs, customer in term of school
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item java">
+                    <div class="item-text">
+                        <div class="item-text-wrap">
+                            <h5 class="item-text-category">JAVA</h5>
+                            <h3 class="item-text-title"> <a href="https://github.com/thoanguyen290795/todolist-react-redux.git" target="_blank">Transaction Management</a></h3>
+                            <p>Manage bank transaction in different types of currency </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item java">
+                    <div class="item-text">
+                        <div class="item-text-wrap">
+                            <h5 class="item-text-category">JAVA</h5>
+                            <h3 class="item-text-title"> <a href="https://github.com/thoanguyen290795/Task-Manage-React-Redux-Router-Firebase.git" target="_blank">Company Management</a></h3>
+                            <p>Add, manage, allocate level of employees, give them right tasks <br>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item java">
+
+                    <div class="item-text react">
+                        <div class="item-text-wrap">
+                            <h5 class="item-text-category">
+                                JAVA</h5>
+                            <h3 class="item-text-title"> <a href="https://github.com/thoanguyen290795/ProductList-API.git" target="_blank" rel="noopener noreferrer"> Bus Management </a></h3>
+                            <p>Add, manage, search bus trips</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item c">
+                    <div class="item-text">
+                        <div class="item-text-wrap">
+                            <h5 class="item-text-category">C</h5>
+                            <h3 class="item-text-title"> <a href="https://github.com/thoanguyen290795/Task-Todo-Vanilla-JS.git" target="_blank"> Test Sounds Device</a></h3>
+                            <p>Application comes with 2 functions: a sound collector and a test tone generator</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item python">
+                    <div class="item-text">
+                        <div class="item-text-wrap">
+                            <h5 class="item-text-category"> Jupyter Notebook </h5>
+                            <h3 class="item-text-title"><a href="https://github.com/thoanguyen290795/Lyric-Search-App.git" target="_blank">Simple Model</a></h3>
+                            <p class="item-text-title">Build a simple Neural Network from Scratch with NumPy</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+    </section>
+    <footer id="main-footer">
+        <div class="footer-content container">
+            <p>Copyright &copy; 2020. All Rights Reserved</p>
+            <div class="social">
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-github"></i>
+            </div>
+        </div>
+
+    </footer>
+    <!-- <script src="work.js"></script> -->
+    <script src="./js/isotope.pkgd.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.porfolio-menu ul li').click(function() {
+                var value = $(this).attr('data-filter');
+                if (value == 'all') {
+                    $('.item').show('1000');
+
+                } else {
+                    $('.item').not('.' + value).hide('1000')
+                    $('.item').filter('.' + value).show('1000')
+                }
+                //add active class
+                $('.porfolio-menu ul li').click(function() {
+                    $(this).addClass('active').siblings().removeClass('active')
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
